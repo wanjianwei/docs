@@ -28,8 +28,8 @@ Each example consists of a sample question along with its corresponding answer. 
 
 ```json
 {
-    "question": "每月的收入趋势分布", 
-    "answer": "SELECT DATE_FORMAT(`billing2_invoices`.`invoice_date`, '%Y-%m') AS `Month`, SUM(`billing2_invoices`.`cost_price`) AS `total_revenue` FROM `billing2_invoices` GROUP BY `Month` ORDER BY `Month`"
+    "question": "How many records in the 'test' table", 
+    "answer": "SELECT COUNT(*) FROM `test`;"
 }
 ```
 
@@ -54,8 +54,8 @@ Few-Shot examples can significantly improve the performance of Chat2Query in var
 Each explanation comprises either a single term or a list of similar terms, accompanied by their detailed descriptions. Here is an example:
 ```json
 {
-    "term": ["经营场所"],
-    "description": "包括'居民区'、'办公区(写字楼)'、'公园(景区)'、'医院'"
+    "term": ["AR"],
+    "description": "refers to the outstanding invoices a company has or the money clients owe the company"
 }
 ```
 
@@ -79,7 +79,7 @@ The primary function of the `Term-Sheet Explanation` is to improve Chat2Query's 
 As mentioned above, `Instruction` is a piece of textual command. Here is an example:
 ```json
 {
-    "instruction": ""
+    "instruction": "If the task requires calculating the sequential growth rate: Using LAG function with OVER clause in SQL"
 }
 ```
 
@@ -91,4 +91,4 @@ There are many scenarios where `Instruction` can be used. What you need to remem
 2. When you want to guide the structure of the SQL: If you have specific requirements for how the SQL should be structured, you can use an `Instruction` to guide Chat2Query.
 
 
-## How to Use Knowledge API
+## How To Use Knowledge API
