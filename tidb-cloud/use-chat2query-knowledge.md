@@ -146,9 +146,6 @@ curl --digest --user ${PUBLIC_KEY}:${PRIVATE_KEY} --request POST 'https://<regio
 
 In the preceding code, The `type` parameter represents the type of the knowledge, defined as follows:
 
-- `type = 'few-shot'`: Few-Shot Example.
-- `type = 'term-sheet'`: Term-Sheet Explanation.
-- `type = 'instruction'`: Few-Shot Example.
-
-
-#### 3. Manage the knowledge you have already added.
+- `type` = 'few-shot': stand for `Few-Shot Example`.
+- `type` = 'term-sheet': stand for `Term-Sheet Explanation`.
+- `type` = 'instruction': stand for `Few-Shot Example`.
