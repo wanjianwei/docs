@@ -1,16 +1,16 @@
 ---
-title: Get Started with Knowledge API
-summary: Learn how to use TiDB Cloud Knowledge API to optimize the SQL generation performance of the chat2query.
+title: Get Started with Domain Knowledge API
+summary: Learn how to use TiDB Cloud Domain Knowledge API to optimize the SQL generation performance of the Chat2Query.
 ---
 
-# Get Started with Knowledge API
+# Get Started with Domain Knowledge API
 
-TiDB Cloud provides the Knowledge API to support users in adding or modifying domain-specific knowledge to improve the SQL generation capabilities of Chat2Query. Its usage aligns with the [Chat2Query API](/tidb-cloud/use-chat2query-api.md). 
+TiDB Cloud provides the Domain Knowledge API to support users in adding or modifying domain-specific knowledge to improve the SQL generation capabilities of Chat2Query. Its usage aligns with the [Chat2Query API](/tidb-cloud/use-chat2query-api.md). 
 
 
 > **Note:**
 >
-> Knowledge API is available for [TiDB Serverless](/tidb-cloud/select-cluster-tier.md#tidb-serverless) clusters. To use the Knowledge API on [TiDB Dedicated](/tidb-cloud/select-cluster-tier.md#tidb-dedicated) clusters, contact [TiDB Cloud support](/tidb-cloud/tidb-cloud-support.md).
+> Domain Knowledge API is available for [TiDB Serverless](/tidb-cloud/select-cluster-tier.md#tidb-serverless) clusters. To use the Domain Knowledge API on [TiDB Dedicated](/tidb-cloud/select-cluster-tier.md#tidb-dedicated) clusters, contact [TiDB Cloud support](/tidb-cloud/tidb-cloud-support.md).
 
 
 ## Introduction to Knowledge Utilized in Chat2Query
@@ -91,10 +91,10 @@ There are many scenarios where `Instruction` can be used. What you need to remem
 2. When you want to guide the structure of the SQL: If you have specific requirements for how the SQL should be structured, you can use an `Instruction` to guide Chat2Query.
 
 
-## How to Use Knowledge API
+## How to Use Domain Knowledge API
 It's important to note that the knowledge used by Chat2Query is **structured according to the database dimension**. Each database can incorporate the various types of knowledge mentioned above. Chat2Query can only use knowledge from the specific database it's connected to. And, you can connect multiple Chat2Query apps to the same database.
 
-Thus, to utilize the Knowledge API to enhance the SQL generation capabilities of Chat2Query from scratch, the process can be divided into two steps:
+Thus, to utilize the Domain Knowledge API to enhance the SQL generation capabilities of Chat2Query from scratch, the process can be divided into two steps:
 
 #### 1. Create a knowledge base for the connected database in the Chat2Query App.
 You can create a knowledge base for a specific database by calling `/v3/knowledgeBases`. After creation, you'll receive a `knowledge_base_id`, which you'll use for future knowledge management.
